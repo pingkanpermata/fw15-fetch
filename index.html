@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fetch api</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Fetch API</title>
 </head>
-<body>
-    <h1 style="color:brown">Daftar User</h1>
-	<ul id="user-list"></ul>
+<body class="bg-gray-100 font-sans">
+	<div class="container mx-auto p-8">
+		<h1 class="text-4xl font-bold text-center mb-8 text-blue-500">List of Users</h1>
+		<div class="flex mb-4">
+			<input type="text" id="search-input" class="w-full px-3 py-2 mr-2 text-gray-700 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-blue-200" placeholder="Search...">
+			<button id="search-button" class="px-4 py-2 font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200">Search</button>
+		</div>
+		<table class="table-auto w-full border border-gray-400 border-collapse">
+			<thead>
+				<tr class="bg-gray-200">
+					<th class="px-4 py-2 font-semibold text-left border">Name</th>
+					<th class="px-4 py-2 font-semibold text-left border">Username</th>
+					<th class="px-4 py-2 font-semibold text-left border">Email</th>
+					<th class="px-4 py-2 font-semibold text-left border">Phone</th>
+					<th class="px-4 py-2 font-semibold text-left border">Website</th>
+					<th class="px-4 py-2 font-semibold text-left border">Company</th>
+					<th class="px-4 py-2 font-semibold text-left border">Address</th>
+				</tr>
+			</thead>
+			<tbody id="user-list">
+			</tbody>
+		</table>
+	</div>
+
 	<script src="script.js"></script>
 </body>
 </html>
